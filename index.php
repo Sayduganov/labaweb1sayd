@@ -25,3 +25,7 @@
   <li><a href="lab3-3-5.php">Задача 3.5</a></li>
   <li><a href="lab3-3-6.html">Задача 3.6</a></li>
 </ul>
+<p> лабораторная работа №4 и 5</p>
+<ul>
+  <li><a href="bd_property/login.php">База данных</a></li>
+</ul>
