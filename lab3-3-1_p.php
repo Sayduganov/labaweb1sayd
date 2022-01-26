@@ -8,5 +8,5 @@
    } else { echo ('Число a=' . $a); }
   } else { echo ('Число b=' . $b); }
 
-echo ("<br> <a href='s3-1.html'> Вернуться назад </a>");
+echo ("<br> <a href='lab3-3-1.html'> Вернуться назад </a>");
 ?>
