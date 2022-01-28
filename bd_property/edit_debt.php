@@ -19,13 +19,15 @@ $rows=mysqli_query($conn, "SELECT * FROM debtors WHERE id_deb='".$_GET['id']."'"
  }
 print "<form action='save_edit_debt.php' method='get'>";
 print "ID жильца:";
-echo '<select name="d">
-<option>...</option>';
+echo '<select name="d">';
 
 $result=mysqli_query($conn,"SELECT * FROM debtors LEFT JOIN housemates ON (debtors.id_mate=housemates.id_mate)");
 
 while ($st2=mysqli_fetch_array($result)) {
- echo  '<option value='.$st2['id_deb'].'>'.iconv("cp1251", "utf-8", $st2['id_mate']).' - '.iconv("cp1251", "utf-8", $st2['fullname']).'</option>';
+echo  '<option ';
+if ($st2['id_mate']==$_GET['id']){ echo 'selected '; }
+
+echo 'value='.$st2['id_deb'].'>'.iconv("cp1251", "utf-8", $st2['id_mate']).' - '.iconv("cp1251", "utf-8", $st2['fullname']).'</option>';
  }
 echo '</select>';
 
